@@ -21,7 +21,8 @@ html {
 }
 
 body {
-	background-color: colors.$main-color;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
 }
 
 a {
@@ -47,4 +48,69 @@ textarea {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+// nav
+
+.nav {
+	position: relative;
+	width: 100%;
+
+	.burger-button {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		padding: 1em;
+		background: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+		z-index: 1000px;
+
+		&__box {
+			position: relative;
+			width: 40px;
+			height: 30px;
+		}
+
+		&__bar,
+		&__bar::before,
+		&__bar::after {
+			right: 0;
+			@include mixins.burgerButton;
+			transition: width 0.3s;
+		}
+
+		&__bar::before,
+		&__bar::after {
+			content: '';
+		}
+
+		&__bar {
+			display: inline-block;
+			top: 0;
+			width: 100%;
+			transition: width 0.3s;
+
+			&::before {
+				content: '';
+				top: 12px;
+				width: 60%;
+			}
+
+			&::after {
+				content: '';
+				top: 24px;
+				width: 30%;
+			}
+		}
+
+		&:hover {
+			.burger-button__bar {
+				&::before,
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
 }

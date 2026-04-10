@@ -1,0 +1,106 @@
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.section-padding {
+  padding: 6em 2em;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+}
+.nav .burger-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000px;
+}
+.nav .burger-button__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+.nav .burger-button__bar, .nav .burger-button__bar::before, .nav .burger-button__bar::after {
+  right: 0;
+  position: absolute;
+  height: 4px;
+  background-color: blue;
+  transition: width 0.3s;
+}
+.nav .burger-button__bar::before, .nav .burger-button__bar::after {
+  content: "";
+}
+.nav .burger-button__bar {
+  display: inline-block;
+  top: 0;
+  width: 100%;
+  transition: width 0.3s;
+}
+.nav .burger-button__bar::before {
+  content: "";
+  top: 12px;
+  width: 60%;
+}
+.nav .burger-button__bar::after {
+  content: "";
+  top: 24px;
+  width: 30%;
+}
+.nav .burger-button:hover .burger-button__bar::before, .nav .burger-button:hover .burger-button__bar::after {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
