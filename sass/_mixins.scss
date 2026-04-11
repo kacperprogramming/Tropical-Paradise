@@ -2,6 +2,13 @@
 
 @mixin burgerButton {
 	position: absolute;
-	height: 4px;
-	background-color: blue;
+	height: 3px;
+	background-color: colors.$pure-white;
+}
+
+@mixin heroImages($bgImg) {
+	background-image: colors.$blue-gradient, url($bgImg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: scroll;
 }

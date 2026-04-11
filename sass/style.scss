@@ -53,10 +53,6 @@ table {
 // nav
 
 .nav {
-	position: relative;
-	height: 100dvh;
-	width: 100%;
-
 	.burger-button {
 		position: fixed;
 		top: 20px;
@@ -93,12 +89,12 @@ table {
 			transition: width 0.3s;
 
 			&::before {
-				top: 12px;
+				top: 13px;
 				width: 60%;
 			}
 
 			&::after {
-				top: 24px;
+				top: 27px;
 				width: 30%;
 			}
 		}
@@ -124,6 +120,7 @@ table {
 		transform: translateX(100%);
 		background-color: colors.$main-color;
 		transition: transform ease-in-out 0.4s;
+		z-index: 100;
 	}
 
 	&__link {
@@ -161,18 +158,83 @@ table {
 	}
 }
 
-@media (min-width: 860px) {
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 75vh;
+	@include mixins.heroImages('../img/header-mini.jpg');
+	color: colors.$pure-white;
+
+	&__title {
+		font-family: 'Dancing Script', sans-serif;
+		font-size: 4.6rem;
+	}
+
+	&__text {
+		text-align: center;
+		padding: 0 2em;
+		font-weight: 200;
+		font-size: 1.4rem;
+	}
+
+	&__button {
+		margin-top: 1em;
+		padding: 0.8em 1.6em;
+		border-radius: 10px;
+		font-size: 1.4rem;
+		background-color: colors.$pure-white;
+		color: colors.$dark;
+        font-weight: 200;
+		cursor: pointer;
+	}
+}
+
+@media (min-width: 800px) {
 	.nav {
-		.nav__link {
+		&__link {
 			font-size: 3.6rem;
 		}
+
+		.burger-button {
+			top: 50px;
+			right: 50px;
+		}
+	}
+
+	.header {
+		@include mixins.heroImages('../img/header-big.jpg');
+
+		&__title {
+			font-size: 7.2rem;
+		}
+
+        &__text {
+            font-size: 1.8rem;
+        }
+
+        &__button {
+            font-size: 1.6rem;
+        }
 	}
 }
 
 @media (min-width: 1220px) {
 	.nav {
-		.nav__link {
+		&__link {
 			font-size: 4.2rem;
 		}
+	}
+
+	.header {
+		&__title {
+			font-size: 10rem;
+		}
+
+        &__text {
+            font-size: 2.2rem;
+        }
 	}
 }
