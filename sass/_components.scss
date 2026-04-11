@@ -9,6 +9,14 @@
 	padding: 6em 2em;
 }
 
+.section-heading {
+	font-weight: 200;
+	color: colors.$main-color;
+	text-align: center;
+	font-size: 3.0rem;
+	text-transform: uppercase;
+}
+
 .white-block {
 	position: absolute;
 	height: 40px;
@@ -43,7 +51,7 @@
 		height: 100%;
 		background-color: colors.$light-white;
 		transform-origin: right;
-		transition: transform .3s;
+		transition: transform 0.3s;
 		transform: scaleX(0);
 		z-index: -1;
 	}
@@ -51,5 +59,17 @@
 	&:hover::before {
 		transform-origin: left;
 		transform: scaleX(1);
+	}
+}
+
+@media (min-width: 500px) {
+	.section-heading {
+		font-size: 4.2rem;
+	}
+}
+
+@media (min-width: 1000px) {
+	.section-heading {
+		font-size: 4.8rem;
 	}
 }

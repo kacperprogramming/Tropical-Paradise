@@ -50,7 +50,9 @@ table {
 	border-spacing: 0;
 }
 
+//
 // nav
+//
 
 .nav {
 	.burger-button {
@@ -158,6 +160,10 @@ table {
 	}
 }
 
+//
+// header
+//
+
 .header {
 	position: relative;
 	display: flex;
@@ -187,8 +193,108 @@ table {
 		font-size: 1.4rem;
 		background-color: colors.$pure-white;
 		color: colors.$dark;
-        font-weight: 200;
+		font-weight: 200;
 		cursor: pointer;
+	}
+}
+
+//
+// main
+//
+
+.main {
+	.dreams {
+		&-boxes {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 5em;
+			gap: 2em;
+		}
+
+		&-box {
+			display: flex;
+			flex-direction: column;
+
+			&__img {
+				width: 100%;
+			}
+
+			&__title {
+				font-size: 2rem;
+				font-weight: bold;
+				margin-top: 1em;
+			}
+
+			&__text {
+				font-weight: 200;
+				margin-top: 1em;
+			}
+		}
+	}
+}
+
+@media (min-width: 500px) {
+	.main {
+		.dreams {
+			&-box {
+				&__title {
+					font-size: 2.6rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 600px) {
+	.main {
+		.dreams {
+			&-boxes {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				margin-top: 5em;
+				gap: 2em;
+			}
+
+			&-box {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: row;
+				gap: 2em;
+
+				&__img {
+					width: 45%;
+				}
+
+				&__img--right {
+					order: 1;
+				}
+
+				&__content {
+					width: 50%;
+				}
+
+				&__title {
+					font-size: 2rem;
+					font-weight: bold;
+					margin-top: 1em;
+				}
+
+				&__text {
+					font-weight: 200;
+					margin-top: 1em;
+				}
+
+				&__text--right,
+				&__title--right {
+					text-align: right;
+				}
+			}
+		}
 	}
 }
 
@@ -211,13 +317,29 @@ table {
 			font-size: 7.2rem;
 		}
 
-        &__text {
-            font-size: 1.8rem;
-        }
+		&__text {
+			font-size: 1.8rem;
+		}
 
-        &__button {
-            font-size: 1.6rem;
-        }
+		&__button {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 1000px) {
+	.main {
+		.dreams {
+			&-box {
+				&__title {
+					font-size: 3.4rem;
+				}
+
+				&__text {
+					font-size: 2rem;
+				}
+			}
+		}
 	}
 }
 
@@ -233,8 +355,8 @@ table {
 			font-size: 10rem;
 		}
 
-        &__text {
-            font-size: 2.2rem;
-        }
+		&__text {
+			font-size: 2.2rem;
+		}
 	}
 }
