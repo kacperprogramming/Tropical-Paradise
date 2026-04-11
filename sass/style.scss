@@ -233,6 +233,39 @@ table {
 			}
 		}
 	}
+
+	.hero-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		@include mixins.heroImages('../img/hero-mini.jpg');
+		background-attachment: fixed;
+		padding: 13em 2em;
+		overflow: hidden;
+		color: colors.$pure-white;
+
+		&__title,
+		&__text {
+			text-align: center;
+		}
+
+		&__title {
+			font-size: 4.8rem;
+			font-family: 'Dancing Script', sans-serif;
+			margin-bottom: 0.5em;
+		}
+
+		&__text {
+			font-weight: 200;
+			padding: 1em;
+		}
+
+		hr {
+			width: 80%;
+		}
+	}
 }
 
 @media (min-width: 500px) {
@@ -338,6 +371,20 @@ table {
 				&__text {
 					font-size: 2rem;
 				}
+			}
+		}
+
+		.hero-img {
+			padding: 30em 2em;
+			@include mixins.heroImages('../img/hero-big.jpg');
+			background-attachment: fixed;
+
+			&__title {
+				font-size: 8.2rem;
+			}
+
+			&__text {
+				font-size: 2.2rem;
 			}
 		}
 	}

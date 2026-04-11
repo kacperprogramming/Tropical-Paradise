@@ -28,7 +28,7 @@
   transform: skew(45deg);
 }
 .white-block-right {
-  bottom: 0;
+  top: 0;
   right: -50px;
   transform: skew(45deg);
 }
@@ -257,6 +257,36 @@ table {
   font-weight: 200;
   margin-top: 1em;
 }
+.main .hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/hero-mini.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-attachment: fixed;
+  padding: 13em 2em;
+  overflow: hidden;
+  color: #fff;
+}
+.main .hero-img__title, .main .hero-img__text {
+  text-align: center;
+}
+.main .hero-img__title {
+  font-size: 4.8rem;
+  font-family: "Dancing Script", sans-serif;
+  margin-bottom: 0.5em;
+}
+.main .hero-img__text {
+  font-weight: 200;
+  padding: 1em;
+}
+.main .hero-img hr {
+  width: 80%;
+}
 
 @media (min-width: 500px) {
   .main .dreams-box__title {
@@ -331,6 +361,20 @@ table {
   }
   .main .dreams-box__text {
     font-size: 2rem;
+  }
+  .main .hero-img {
+    padding: 30em 2em;
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/hero-big.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-attachment: fixed;
+  }
+  .main .hero-img__title {
+    font-size: 8.2rem;
+  }
+  .main .hero-img__text {
+    font-size: 2.2rem;
   }
 }
 @media (min-width: 1220px) {
