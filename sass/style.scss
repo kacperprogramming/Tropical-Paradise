@@ -279,7 +279,7 @@ table {
 
 		&__card {
 			position: relative;
-			height: 450px;
+			height: 500px;
 			width: 100%;
 			color: colors.$pure-white;
 			perspective: 1000px;
@@ -336,7 +336,7 @@ table {
 				}
 
 				&-list {
-					padding: 1em 0;
+					padding: 1.5em 0;
 					text-align: center;
 					list-style: none;
 
@@ -446,6 +446,14 @@ table {
 			&__cards {
 				display: flex;
 				flex-direction: row;
+			}
+
+			&__card {
+				&-info {
+					&-list {
+						padding: 2.7em 0;
+					}
+				}
 			}
 		}
 	}

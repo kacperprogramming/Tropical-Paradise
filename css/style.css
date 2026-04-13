@@ -297,7 +297,7 @@ table {
 }
 .main .islands__card {
   position: relative;
-  height: 450px;
+  height: 500px;
   width: 100%;
   color: #fff;
   perspective: 1000px;
@@ -347,7 +347,7 @@ table {
   font-size: 3rem;
 }
 .main .islands__card-info-list {
-  padding: 1em 0;
+  padding: 1.5em 0;
   text-align: center;
   list-style: none;
 }
@@ -423,6 +423,9 @@ table {
   .main .islands__cards {
     display: flex;
     flex-direction: row;
+  }
+  .main .islands__card-info-list {
+    padding: 2.7em 0;
   }
 }
 @media (min-width: 800px) {
