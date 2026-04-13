@@ -328,7 +328,7 @@ table {
 				border-radius: 8px;
 				opacity: 0;
 				transform: rotateY(180deg);
-                transition: 1s;
+				transition: 1s;
 
 				&-title {
 					font-family: 'Dancing Script', sans-serif;
@@ -368,10 +368,10 @@ table {
 					transform: rotateY(-180deg);
 				}
 
-                .islands__card-info {
-                    opacity: 1;
-                    transform: rotateY(0);
-                }
+				.islands__card-info {
+					opacity: 1;
+					transform: rotateY(0);
+				}
 			}
 		}
 	}
@@ -435,6 +435,17 @@ table {
 				&__title--right {
 					text-align: right;
 				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.main {
+		.islands {
+			&__cards {
+				display: flex;
+				flex-direction: row;
 			}
 		}
 	}

@@ -419,6 +419,12 @@ table {
     text-align: right;
   }
 }
+@media (min-width: 768px) {
+  .main .islands__cards {
+    display: flex;
+    flex-direction: row;
+  }
+}
 @media (min-width: 800px) {
   .nav__link {
     font-size: 3.6rem;
