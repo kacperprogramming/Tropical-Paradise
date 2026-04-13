@@ -166,7 +166,7 @@ table {
   width: 100%;
   height: 100dvh;
   transform: translateX(100%);
-  background-color: #1755e7;
+  background: linear-gradient(45deg, rgb(20, 105, 241), rgb(42, 10, 184));
   transition: transform ease-in-out 0.4s;
   z-index: 100;
 }
@@ -286,6 +286,94 @@ table {
 }
 .main .hero-img hr {
   width: 80%;
+}
+.main .islands__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 5em;
+}
+.main .islands__card {
+  position: relative;
+  height: 450px;
+  width: 100%;
+  color: #fff;
+  perspective: 1000px;
+  text-align: center;
+}
+.main .islands__card-img {
+  padding: 2em;
+  height: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  transition: 1s;
+}
+.main .islands__card-img--first {
+  background-image: linear-gradient(45deg, rgba(8, 206, 255, 0.75), rgba(8, 24, 255, 0.75)), url("/img/island1.jpg");
+}
+.main .islands__card-img--second {
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("/img/island2.jpg");
+}
+.main .islands__card-img--third {
+  background-image: linear-gradient(45deg, rgba(190, 10, 214, 0.75), rgba(68, 0, 255, 0.75)), url("/img/island3.jpg");
+}
+.main .islands__card-img-title {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 3rem;
+}
+.main .islands__card-img-info {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.main .islands__card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(8, 206, 255, 0.75), rgba(8, 24, 255, 0.75));
+  padding: 2em;
+  border-radius: 8px;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: 1s;
+}
+.main .islands__card-info-title {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 3rem;
+}
+.main .islands__card-info-list {
+  padding: 1em 0;
+  text-align: center;
+  list-style: none;
+}
+.main .islands__card-info-list-item {
+  padding: 1em 0;
+  border-top: 1px solid #fff;
+}
+.main .islands__card-info-list-item:nth-child(1) {
+  border-top: none;
+}
+.main .islands__card-info-button {
+  width: 100%;
+  padding: 0.8em 1.6em;
+  border-radius: 10px;
+  background-color: #00ffaa;
+}
+.main .islands__card-info-button::before {
+  background-color: #0fe29c;
+}
+.main .islands__card:hover .islands__card-img {
+  opacity: 0;
+  transform: rotateY(-180deg);
+}
+.main .islands__card:hover .islands__card-info {
+  opacity: 1;
+  transform: rotateY(0);
 }
 
 @media (min-width: 500px) {
