@@ -375,6 +375,48 @@ table {
   opacity: 1;
   transform: rotateY(0);
 }
+.main .offers__bg-img {
+  position: relative;
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/offer-mini.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  overflow: hidden;
+}
+.main .offers__bg-img .section-heading {
+  color: #fff;
+}
+.main .offers__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5em;
+}
+.main .offers__card {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+}
+.main .offers__card-img {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+.main .offers__card-img--first {
+  background-image: url("/img/option1.jpg");
+}
+.main .offers__card-img--second {
+  background-image: url("/img/option2.jpg");
+}
+.main .offers__card-img--third {
+  background-image: url("/img/option3.jpg");
+}
+.main .offers__card-content {
+  padding: 2em;
+  background-color: #fff;
+}
 
 @media (min-width: 500px) {
   .main .dreams-box__title {

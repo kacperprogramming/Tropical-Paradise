@@ -375,6 +375,56 @@ table {
 			}
 		}
 	}
+
+	.offers {
+		&__bg-img {
+			position: relative;
+			@include mixins.heroImages('../img/offer-mini.jpg');
+			overflow: hidden;
+
+			.section-heading {
+				color: colors.$pure-white;
+			}
+		}
+
+		&__cards {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 5em;
+		}
+
+		&__card {
+			display: flex;
+			flex-direction: column;
+			height: 450px;
+
+			&-img {
+				width: 100%;
+				background-position: center;
+				background-size: cover;
+				background-attachment: scroll;
+
+				&--first {
+					background-image: url('/img/option1.jpg');
+				}
+
+				&--second {
+					background-image: url('/img/option2.jpg');
+				}
+
+				&--third {
+					background-image: url('/img/option3.jpg');
+				}
+			}
+
+			&-content {
+				padding: 2em;
+				background-color: colors.$pure-white;
+			}
+		}
+	}
 }
 
 @media (min-width: 500px) {
