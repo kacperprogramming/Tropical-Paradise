@@ -318,6 +318,8 @@ table {
 			}
 
 			&-info {
+				display: flex;
+				flex-direction: column;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -336,7 +338,7 @@ table {
 				}
 
 				&-list {
-					padding: 1.5em 0;
+					padding: 2em 0;
 					text-align: center;
 					list-style: none;
 
@@ -371,6 +373,63 @@ table {
 				.islands__card-info {
 					opacity: 1;
 					transform: rotateY(0);
+				}
+			}
+		}
+	}
+
+	.offers {
+		&__bg-img {
+			position: relative;
+			@include mixins.heroImages('../img/offer-mini.jpg');
+			overflow: hidden;
+
+			.section-heading {
+				color: colors.$pure-white;
+			}
+		}
+
+		&__cards {
+			display: flex;
+			flex-direction: column;
+			gap: 2em;
+			margin-top: 5em;
+		}
+
+		&__card {
+			display: flex;
+			flex-direction: column;
+			background-color: colors.$pure-white;
+			overflow: hidden;
+
+			&-img {
+				width: 100%;
+				transition: transform 0.3s;
+
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+
+			&-content {
+				padding: 2em;
+
+				&-title {
+					font-weight: 300;
+					margin-bottom: 1em;
+				}
+
+				&-button {
+					margin-top: 2em;
+					width: 100%;
+					padding: 0.8em 1.6em;
+					border-radius: 10px;
+					background-color: colors.$main-color;
+					color: colors.$pure-white;
+
+					&::before {
+						background-color: colors.$secondary-color;
+					}
 				}
 			}
 		}
@@ -456,6 +515,36 @@ table {
 				}
 			}
 		}
+
+		.offers {
+
+			&__bg-img {
+				@include mixins.heroImages('../img/offer-big.jpg');
+			}
+
+			&__card {
+				display: flex;
+				flex-direction: row;
+
+				&-img {
+					width: 50%;
+
+					&--right {
+						order: 1;
+					}
+				}
+
+				&-content {
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+
+					&-title {
+						font-size: 2.4rem;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -513,6 +602,16 @@ table {
 
 			&__text {
 				font-size: 2.2rem;
+			}
+		}
+
+		.offers {
+			&__card {
+				&-content {
+					&-title {
+						font-size: 3.2rem;
+					}
+				}
 			}
 		}
 	}

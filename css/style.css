@@ -330,6 +330,8 @@ table {
   bottom: 20px;
 }
 .main .islands__card-info {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
@@ -347,7 +349,7 @@ table {
   font-size: 3rem;
 }
 .main .islands__card-info-list {
-  padding: 1.5em 0;
+  padding: 2em 0;
   text-align: center;
   list-style: none;
 }
@@ -374,6 +376,54 @@ table {
 .main .islands__card:hover .islands__card-info {
   opacity: 1;
   transform: rotateY(0);
+}
+.main .offers__bg-img {
+  position: relative;
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/offer-mini.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  overflow: hidden;
+}
+.main .offers__bg-img .section-heading {
+  color: #fff;
+}
+.main .offers__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 5em;
+}
+.main .offers__card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
+}
+.main .offers__card-img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+.main .offers__card-img:hover {
+  transform: scale(1.05);
+}
+.main .offers__card-content {
+  padding: 2em;
+}
+.main .offers__card-content-title {
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+.main .offers__card-content-button {
+  margin-top: 2em;
+  width: 100%;
+  padding: 0.8em 1.6em;
+  border-radius: 10px;
+  background-color: #1755e7;
+  color: #fff;
+}
+.main .offers__card-content-button::before {
+  background-color: #164dcc;
 }
 
 @media (min-width: 500px) {
@@ -427,6 +477,30 @@ table {
   .main .islands__card-info-list {
     padding: 2.7em 0;
   }
+  .main .offers__bg-img {
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/offer-big.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+  .main .offers__card {
+    display: flex;
+    flex-direction: row;
+  }
+  .main .offers__card-img {
+    width: 50%;
+  }
+  .main .offers__card-img--right {
+    order: 1;
+  }
+  .main .offers__card-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main .offers__card-content-title {
+    font-size: 2.4rem;
+  }
 }
 @media (min-width: 800px) {
   .nav__link {
@@ -472,6 +546,9 @@ table {
   }
   .main .hero-img__text {
     font-size: 2.2rem;
+  }
+  .main .offers__card-content-title {
+    font-size: 3.2rem;
   }
 }
 @media (min-width: 1220px) {
