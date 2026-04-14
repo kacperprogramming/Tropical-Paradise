@@ -279,7 +279,7 @@ table {
 
 		&__card {
 			position: relative;
-			height: 450px;
+			height: 500px;
 			width: 100%;
 			color: colors.$pure-white;
 			perspective: 1000px;
@@ -318,6 +318,8 @@ table {
 			}
 
 			&-info {
+				display: flex;
+				flex-direction: column;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -336,7 +338,7 @@ table {
 				}
 
 				&-list {
-					padding: 1em 0;
+					padding: 2em 0;
 					text-align: center;
 					list-style: none;
 
@@ -389,40 +391,53 @@ table {
 
 		&__cards {
 			display: flex;
-			justify-content: center;
-			align-items: center;
 			flex-direction: column;
+			gap: 2em;
 			margin-top: 5em;
 		}
 
 		&__card {
 			display: flex;
 			flex-direction: column;
-			height: 450px;
+			background-color: colors.$pure-white;
+			overflow: hidden;
 
 			&-img {
 				width: 100%;
-				background-position: center;
-				background-size: cover;
-				background-attachment: scroll;
+				transition: transform 0.3s;
 
-				&--first {
-					background-image: url('/img/option1.jpg');
-				}
-
-                &--second {
-					background-image: url('/img/option2.jpg');
-				}
-
-                &--third {
-					background-image: url('/img/option3.jpg');
+				&:hover {
+					transform: scale(1.05);
 				}
 			}
 
-            &-content {
-                padding: 2em;
-                background-color: colors.$pure-white;
-            }
+			&-content {
+				padding: 2em;
+
+				&-title {
+					font-weight: 300;
+					margin-bottom: 1em;
+                    font-size: 2.4rem;
+				}
+
+                &-text {
+                    font-weight: 200;
+                    font-size: 1.4rem;
+                }
+
+				&-button {
+					margin-top: 2em;
+					width: 100%;
+					padding: 0.8em 1.6em;
+					border-radius: 10px;
+					background-color: colors.$main-color;
+					color: colors.$pure-white;
+
+					&::before {
+						background-color: colors.$secondary-color;
+					}
+				}
+			}
 		}
 	}
 }
@@ -497,6 +512,44 @@ table {
 				display: flex;
 				flex-direction: row;
 			}
+
+			&__card {
+				&-info {
+					&-list {
+						padding: 2.7em 0;
+					}
+				}
+			}
+		}
+
+		.offers {
+
+			&__bg-img {
+				@include mixins.heroImages('../img/offer-big.jpg');
+			}
+
+			&__card {
+				display: flex;
+				flex-direction: row;
+
+				&-img {
+					width: 50%;
+
+					&--right {
+						order: 1;
+					}
+				}
+
+				&-content {
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+
+					&-title {
+						font-size: 2.4rem;
+					}
+				}
+			}
 		}
 	}
 }
@@ -555,6 +608,16 @@ table {
 
 			&__text {
 				font-size: 2.2rem;
+			}
+		}
+
+		.offers {
+			&__card {
+				&-content {
+					&-title {
+						font-size: 3.2rem;
+					}
+				}
 			}
 		}
 	}
