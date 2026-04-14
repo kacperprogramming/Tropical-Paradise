@@ -410,19 +410,19 @@ table {
 					background-image: url('/img/option1.jpg');
 				}
 
-				&--second {
+                &--second {
 					background-image: url('/img/option2.jpg');
 				}
 
-				&--third {
+                &--third {
 					background-image: url('/img/option3.jpg');
 				}
 			}
 
-			&-content {
-				padding: 2em;
-				background-color: colors.$pure-white;
-			}
+            &-content {
+                padding: 2em;
+                background-color: colors.$pure-white;
+            }
 		}
 	}
 }
