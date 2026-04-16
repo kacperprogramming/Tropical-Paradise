@@ -510,14 +510,11 @@ table {
 			textarea {
 				border: none;
 				border-radius: 10px;
+				padding: 0.8em;
 			}
 
 			textarea {
 				min-height: 200px;
-			}
-
-			input {
-				padding: 0.8em;
 			}
 
 			&-button {
@@ -525,25 +522,50 @@ table {
 				background-color: colors.$main-color;
 				color: colors.$pure-white;
 				margin-top: 2.5em;
-                width: 100%;
-                max-width: 300px;
-                padding: 0.8em 1.6em;
-                border-radius: 10px;
+				width: 100%;
+				max-width: 300px;
+				padding: 0.8em 1.6em;
+				border-radius: 10px;
 
-                &::before {
-                    background-color: colors.$secondary-color;
-                }
+				&::before {
+					background-color: colors.$secondary-color;
+				}
 			}
 		}
 
-        .white-block-left {
-            background-color: colors.$dark;
-        }
+		.white-block-left {
+			background-color: colors.$dark;
+		}
 	}
 }
 
 .footer {
-    background-color: colors.$dark;
+	color: colors.$pure-white;
+	background-color: colors.$dark;
+
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+
+	.middle,
+	.right {
+		display: none;
+	}
+
+	&__box-title {
+		font-size: 2.4rem;
+		margin-bottom: 1em;
+		text-transform: uppercase;
+	}
+
+	&__box-text {
+		font-weight: 200;
+	}
+
+	&__year {
+		text-align: center;
+		padding: 2em;
+	}
 }
 
 @media (min-width: 500px) {
@@ -660,6 +682,43 @@ table {
 				display: flex;
 				flex-direction: row;
 				gap: 2em;
+			}
+		}
+	}
+
+	.footer {
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.middle,
+		.right {
+			display: flex;
+		}
+
+		.left {
+			width: 60%;
+		}
+
+		&__box-title {
+			font-size: 2.4rem;
+			margin-bottom: 1em;
+		}
+
+		a {
+			color: colors.$pure-white;
+			padding: 0.5em 0;
+			font-weight: 200;
+
+			&:hover {
+				text-decoration: underline;
+                text-underline-offset: 2px;
 			}
 		}
 	}

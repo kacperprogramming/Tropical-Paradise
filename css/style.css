@@ -490,12 +490,10 @@ table {
 .main .contact__box textarea {
   border: none;
   border-radius: 10px;
+  padding: 0.8em;
 }
 .main .contact__box textarea {
   min-height: 200px;
-}
-.main .contact__box input {
-  padding: 0.8em;
 }
 .main .contact__box-button {
   align-self: flex-end;
@@ -515,7 +513,27 @@ table {
 }
 
 .footer {
+  color: #fff;
   background-color: #2e2e2e;
+}
+.footer .wrapper {
+  padding: 6em 2em 2em;
+}
+.footer .middle,
+.footer .right {
+  display: none;
+}
+.footer__box-title {
+  font-size: 2.4rem;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+.footer__box-text {
+  font-weight: 200;
+}
+.footer__year {
+  text-align: center;
+  padding: 2em;
 }
 
 @media (min-width: 500px) {
@@ -597,6 +615,34 @@ table {
     display: flex;
     flex-direction: row;
     gap: 2em;
+  }
+  .footer__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__box {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .middle,
+  .footer .right {
+    display: flex;
+  }
+  .footer .left {
+    width: 60%;
+  }
+  .footer__box-title {
+    font-size: 2.4rem;
+    margin-bottom: 1em;
+  }
+  .footer a {
+    color: #fff;
+    padding: 0.5em 0;
+    font-weight: 200;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 }
 @media (min-width: 800px) {
