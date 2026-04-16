@@ -471,6 +471,52 @@ table {
 .main .reviews .reviews__box:hover {
   transform: scale(0.95);
 }
+.main .contact {
+  position: relative;
+  background-color: #eee;
+}
+.main .contact__box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+.main .contact__box label {
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 1.5em 0 0.5em 0;
+}
+.main .contact__box input,
+.main .contact__box textarea {
+  border: none;
+  border-radius: 10px;
+}
+.main .contact__box textarea {
+  min-height: 200px;
+}
+.main .contact__box input {
+  padding: 0.8em;
+}
+.main .contact__box-button {
+  align-self: flex-end;
+  background-color: #1755e7;
+  color: #fff;
+  margin-top: 2.5em;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.8em 1.6em;
+  border-radius: 10px;
+}
+.main .contact__box-button::before {
+  background-color: #164dcc;
+}
+.main .contact .white-block-left {
+  background-color: #2e2e2e;
+}
+
+.footer {
+  background-color: #2e2e2e;
+}
 
 @media (min-width: 500px) {
   .main .dreams-box__title {
