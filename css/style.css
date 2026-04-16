@@ -430,6 +430,47 @@ table {
 .main .offers__card-content-button::before {
   background-color: #164dcc;
 }
+.main .reviews .reviews__boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5em;
+  margin-top: 5em;
+}
+.main .reviews .reviews__box {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 6px 4px 11px -3px rgba(0, 0, 0, 0.59);
+  border-radius: 10px;
+  padding: 2em;
+  transition: transform 0.3s;
+}
+.main .reviews .reviews__box-img {
+  position: absolute;
+  right: 50px;
+  top: -50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.main .reviews .reviews__box-text {
+  margin-top: 2em;
+  font-weight: 200;
+}
+.main .reviews .reviews__box-name {
+  font-weight: bold;
+  margin-top: 1em;
+}
+.main .reviews .reviews__box-quote-icon {
+  font-size: 5.6rem;
+  color: #1755e7;
+}
+.main .reviews .reviews__box:hover {
+  transform: scale(0.95);
+}
 
 @media (min-width: 500px) {
   .main .dreams-box__title {
@@ -505,6 +546,11 @@ table {
   }
   .main .offers__card-content-title {
     font-size: 2.4rem;
+  }
+  .main .reviews .reviews__boxes {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
   }
 }
 @media (min-width: 800px) {

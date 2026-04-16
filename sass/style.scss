@@ -417,13 +417,13 @@ table {
 				&-title {
 					font-weight: 300;
 					margin-bottom: 1em;
-                    font-size: 2.4rem;
+					font-size: 2.4rem;
 				}
 
-                &-text {
-                    font-weight: 200;
-                    font-size: 1.4rem;
-                }
+				&-text {
+					font-weight: 200;
+					font-size: 1.4rem;
+				}
 
 				&-button {
 					margin-top: 2em;
@@ -438,6 +438,55 @@ table {
 					}
 				}
 			}
+		}
+	}
+
+	.reviews {
+		.reviews__boxes {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 5em;
+			margin-top: 5em;
+		}
+
+		.reviews__box {
+			position: relative;
+			background-color: #fff;
+			box-shadow: 6px 4px 11px -3px rgba(0, 0, 0, 0.59);
+			border-radius: 10px;
+			padding: 2em;
+            transition: transform 0.3s;
+
+			&-img {
+				position: absolute;
+				right: 50px;
+				top: -50px;
+				object-fit: cover;
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+			}
+
+			&-text {
+				margin-top: 2em;
+				font-weight: 200;
+			}
+
+			&-name {
+				font-weight: bold;
+                margin-top: 1em;
+			}
+
+            &-quote-icon {
+                font-size: 5.6rem;
+                color: colors.$main-color;
+            }
+
+            &:hover {
+                transform: scale(0.95);
+            }
 		}
 	}
 }
@@ -523,7 +572,6 @@ table {
 		}
 
 		.offers {
-
 			&__bg-img {
 				@include mixins.heroImages('../img/offer-big.jpg');
 			}
@@ -551,6 +599,14 @@ table {
 				}
 			}
 		}
+
+        .reviews {
+            .reviews__boxes {
+                display: flex;
+                flex-direction: row;
+                gap: 2em;
+            }
+        }
 	}
 }
 
